@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Assignment Management</title>
+    <meta charset="UTF-8">
+  <title>Next Page Button</title>
+  <script>
+    function goToNextPage(button) {
+      button.disabled = true; // disable the button after click
+      button.innerHTML = "Loading..."; // change the button text
+      setTimeout(function() {
+        location.href = "pdf.html"; // redirect to the next page after a delay
+      }, 2000); // change the delay time as required
+    }
+  </script>
+</head>
+<body style="background-image: url('pngtree-abstract-bg-image_914283.png.jpeg'); background-repeat: no-repeat; background-size: cover;">
+    <h1>Welcome to the Student Assignment Management System</h1>
+    
+    <h2>Assignments</h2>
+    <ul>
+        <li>Assignment 1 - Due Date: 2022-01-15</li>
+        <li>Assignment 2 - Due Date: 2022-01-22</li>
+        <li>Assignment 3 - Due Date: 2022-01-29</li>
+    </ul>
+    
+    <h2>Add New Assignment</h2>
+    <form>
+        <label for="assignmentName">Assignment Name:</label>
+        <input type="text" id="assignmentName" name="assignmentName" required><br><br>
+        
+        <label for="dueDate">Due Date:</label>
+        <input type="date" id="dueDate" name="dueDate" required><br><br>
+        
+        <input type="submit" value="Add Assignment">
+    </form>
+    <body>
+        <button onclick="goToNextPage(this)">Next Page</button>
+      </body>
+</body>
+</html>
